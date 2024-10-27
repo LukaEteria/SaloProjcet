@@ -1,0 +1,36 @@
+/* src/Components/Footer.css */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian&display=swap');
+body {
+    font-family: 'Noto Serif Georgian', serif;
+}
+.footer {
+    height: 30vh;
+    background: url("../../src/assets/Items/background-4.jpg");
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-icons a {
+    margin: 0 15px;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ffcc00; /* Change this to your desired hover color */
+}
+
+
+
+/* CSS ფაილში, მაგალითად styles.css */
+.product-item {
+    display: inline-block; /* ეს საშუალებას გაწვდოს პროდუქტის ელემენტების სწორი განლაგება */
+    margin: 10px;
+    transition: transform 0.3s; /* ეს დააყენებს ტრანსფორმაციის ეფექტს */
+  }
+  
+  .product-item:hover {
+    transform: rotateY(10deg) translateZ(30px); /* ტრიალი და წინ წასვლა */
+  }
+  

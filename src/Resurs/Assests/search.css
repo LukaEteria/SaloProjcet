@@ -1,0 +1,60 @@
+/* search-input კლასი */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian&display=swap');
+body {
+    font-family: 'Noto Serif Georgian', serif;
+}
+.search-input {
+    width: 85%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* product-list კლასი */
+.product-list {
+    position: absolute; /* შეინარჩუნეთ ეს */
+    max-height: 300px; /* მაქსიმალური სიმაღლე, შეგიძლიათ შეცვალოთ */
+    overflow-y: auto; /* ვერტიკალური სქროლი */
+    width: 16%; /* შეინარჩუნეთ ან შეცვალეთ საჭიროების მიხედვით */
+    background: white; /* ფონდის ფერი */
+    border: 1px solid #ccc; /* ზღვარი */
+    border-radius: 5px; /* კუთხეების გასწორება */
+    z-index: 1000; /* მეტი სექრეტში */
+}
+
+/* product-item კლასი */
+.product-item {
+    overflow: hidden;
+    display: flex;
+    justify-content: center; /* ტექსტისა და სურათის სწორი განლაგება */
+    align-items: center; /* ფოტო და ტექსტის გასწორება */
+    padding: 10px; /* Padding პროდუქტის სახით */
+    min-height: 80px; /* მინიმალური სიმაღლე (შეცვალეთ საჭიროების მიხედვით) */
+    transition: background 0.3s; /* ფონის გამრავლება */
+    border-radius: 5px; /* კუთხეების გასწორება */
+}
+
+.product-item:hover {
+    background: #f9f9f9; /* ფონდის ფერის ცვლილება როცა მზე ატარებს */
+}
+
+.product-item img {
+    width: 50px; /* სურათის სიგანე */
+    height: 50px; /* სურათის სიმაღლე, უფრო დიდი ხდება */
+    border-radius: 5px; /* სურათების რბილი კუთხეები */
+    transition: transform 0.3s; /* ტრანსფორმაციის ეფექტი */
+}
+
+.product-item img:hover {
+    transform: scale(1.1); /* სურათის ზომის გაზრდა, როცა მზე ატარებს */
+}
+
+/* no-products კლასი */
+.no-products {
+    width: 100%; /* სრულ სიგანეზე */
+    position: absolute;
+    color: red; /* შეცვალეთ საჭიროების შემთხვევაში */
+    text-align: center;
+    margin-top: 10px;
+}

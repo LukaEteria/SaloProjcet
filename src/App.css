@@ -1,0 +1,393 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wdth,wght@62.5..100,500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+body {
+    font-family: 'Noto Serif Georgian', serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  overflow-x:hidden ;
+}
+.allcontainer {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+}
+.the-header {
+  display: flex;
+  justify-content: space-between;
+  height: 53px; /* სრულად ეკრანის სიმაღლე */
+  margin: 0 30px;
+  padding: 0px 30px 0px 30px;
+}
+
+.contact-info-left {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 30%;
+  height: 53px;
+  gap: 10px;
+}
+.contact-info-left::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 63%;
+  width: 100vw;
+  height: 53px;
+  transform: skewX(-25deg);
+  z-index: -1;
+  background: #295995;
+}
+.contact-info-left::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  right: 62.5%;
+  width: 100vw;
+  height: 53px;
+  transform: skewX(-25deg);
+  z-index: -2;
+  background: #6cc5d4;
+  animation: swell 5s ease -1.25s infinite;
+}
+
+.contact-info-left > P {
+  font-size: 13.86px;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  cursor: pointer;
+}
+
+.navigation {
+  position: sticky;
+  z-index: 1000; 
+  display: flex; /* სექციის შიგნით ელემენტების ფონტის პროპორციული გაწვევა */
+  align-items: center; /* ელემენტების ვერტიკალური ცენტრირება */
+  height: 118px;
+  margin: 20px 30px;
+  padding: 0 0px;
+  justify-content: center;
+}
+
+.image_description {
+  width: 60%;
+  position: absolute;
+  right: 0; /* მარჯვენა მხარეს */
+  top: 20%; /* ვერტიკალურად ცენტრში */
+  transform: translateY(-50%); /* ვერტიკალური ცენტრი */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 30px;
+}
+
+.image_description > h2 {
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-size: 5.6em;
+  font-weight: 700;
+
+  
+}
+.image-header-txt {
+  position: relative;
+  bottom: 400rem; /* თავდაპირველი პოზიცია კონტეინერის ქვემოთ */
+  animation: slideUp 1.5s ease-out forwards; /* ანიმაცია */
+}
+
+@keyframes slideUp {
+  0% {
+    bottom: -100px; /* კონტეინერის ქვემოთ არის */
+    opacity: 0; /* ტექსტი ფარულია */
+  }
+  50% {
+    opacity: 0; /* ჯერ კიდევ ფარულია ნახევარ ანიმაციამდე */
+  }
+  100% {
+    bottom: 0; /* ამოდის კონტეინერის შიგნით */
+    opacity: 1; /* სრულად გამოჩნდება */
+  }
+}
+
+.header-paragraph{
+  font-family: "Roboto", sans-serif;
+  width: 60%;
+  padding: 0 20px;
+  color: #000000;
+  font-size: 0.9625em;
+  line-height: 26px;
+  font-weight: 500;
+  position: relative;
+  bottom: 400rem; /* თავდაპირველი პოზიცია კონტეინერის ქვემოთ */
+  animation: slideUp 1.8s ease-out forwards; /* ანიმაცია */
+ 
+}
+
+.image-container {
+  display: flex; /* Flexbox რეჟიმი */
+  justify-content: center; /* ჰორიზონტალური ცენტრირება */
+  align-items: center; /* ვერტიკალური ცენტრირება */
+  height: 100%; /* მაქსიმალური სიმაღლე */
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 50%; /* სურათის სიგანე */
+  height: auto; /* სიმაღლის ავტომატური შესაბამისობა */
+  transition: transform 0.3s ease; /* გლუვი გარდაქმნა */
+}
+
+.image-container img:hover {
+  transform: scale(1); /* ჰოვერზე სურათის მომატება */
+}
+
+.header > nav > ul {
+  display: flex; /* ნავიგაციის ელემენტების ლინეარული გაწვდვა */
+  list-style: none; /* ჩამოსხმული სიის ინდიკატორების დაფარვა */
+  padding: 0; /* Padding-ის თავიდან აცილება */
+  margin: 0; /* Margin-ის თავიდან აცილება */
+  gap: 10px;
+}
+
+.header > nav > ul > li {
+  margin: 0 15px; /* შორის სივრცეები ელემენტებს შორის */
+}
+
+.header > nav > ul > li > a {
+  
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.5px;
+  color: #000; /* ტექსტის ფერი */
+  font-weight: bold; /* სქელი ტექსტი */
+  transition: color 0.3s ease; /* ტექსტის ფერის გლუვი გარდაქმნა */
+}
+
+.header > nav > ul > li > a:hover {
+  color: #007bff; /* ტექსტის ფერი ჰოვერზე */
+}
+
+nav {
+  width: 40%;
+}
+
+
+
+
+
+
+.footer {
+  background-color: #2c3e50; /* ფონის ფერი */
+  color: #ecf0f1; /* ტექსტის ფერი */
+  padding: 20px 0; /* Padding ზედა და ქვედა */
+  position: relative; /* საჭიროების შემთხვევაში წვდომისთვის */
+}
+
+.footer-content {
+  max-width: 1200px; /* მაქსიმალური სიგანე */
+  margin: 0 auto; /* ცენტრირება */
+  display: flex; /* ფლექსური განლაგება */
+  justify-content: space-between; /* სივრცის გასწვრივ განაწილება */
+  align-items: center; /* ცენტრში გაწვდვა */
+}
+
+.footer-links {
+  display: flex; /* ფლექსური განლაგება */
+}
+
+.footer-links a {
+  color: #ecf0f1; /* ტექსტის ფერი */
+  margin: 0 15px; /* სივრცე ლინკებს შორის */
+  text-decoration: none; /* ხაზის წაშლა */
+  transition: color 0.3s; /* მუქი ტრანსფორმაცია */
+}
+
+.footer-links a:hover {
+  color: #3498db; /*Hovered link color */
+}
+
+.footer-copy {
+  text-align: right; /* ტექსტის მარჯვენა გაწვდვა */
+}
+
+.Home_container {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-input {
+    width: 30%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .product-list {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+   
+    
+  }
+  
+  .product-item {
+    background: #fff;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .no-products {
+    color: red; /* შეცვალეთ საჭიროების შემთხვევაში */
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+
+  .no-products {
+    width: 30%;
+  }
+
+.contact-info-right {
+  width: 20%;
+}
+.Card_Container {
+  margin: 80px 0 ;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.cards {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 55px;
+  flex-wrap: wrap; /* მობილური ეკრანებისთვის ელემენტების გადატანა ახალ ხაზზე */
+}
+.description_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.Prodname{
+  color: #295995;
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 0px;
+}
+
+
+
+/* CSS */
+.button-53 {
+  margin-top: 10px;
+  display: flex;
+  border-radius: 40px;
+  font-size: 17px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 10px; /* მეტი სივრცე ტექსტისთვის */
+  outline: 0;
+  border: 1px solid #6cc5d4;
+  cursor: pointer;
+  position: relative;
+  background-color: #6cc4d47e;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  overflow: hidden;
+  color:azure;
+  gap: 5px;
+  
+}
+
+
+.button-53:after {
+  content: "";
+  background-color: #295995;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+  border-radius: 0 50px;
+}
+
+.button-53:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+.Butttons_Projects {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+
+
+}
+/* CSS */
+.button-52 {
+  font-size: 15px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  border: 1px solid #6cc5d4;
+  cursor: pointer;
+  position: relative;
+  background-color: #6cc4d47e;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  overflow: hidden;
+  color: white;
+
+}
+
+
+.button-52:after {
+  content: "";
+  background-color: #295995;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+  border-radius: 0 50px;
+}
+
+.button-52:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+.prod_info {
+  color: #1f4c5b;
+  font-family: 'Noto Serif Georgian', serif;
+  font-weight: 450;
+  font-size: 25px;
+}

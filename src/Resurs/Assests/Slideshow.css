@@ -1,0 +1,348 @@
+.slider {
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .wrapper {
+    transition: transform 0.5s ease-in-out;
+    transition: 0.5s all linear;
+    will-change: transform;
+  }
+  
+  .arrows {
+    position: absolute;
+    top: 34%;
+    background: none;
+    height: 60px;
+    border: 0;
+    cursor: pointer;
+    transition: ease 0.3s all;
+    outline: none;
+    color: #3d3d3d;
+  
+    &.prev {
+        left: 0;
+  
+        &:hover {
+            opacity: 0.7;
+            left: -10px;
+        }
+    }
+  
+    &.next {
+        right: 0;
+  
+        &:hover {
+            right: -10px;
+            opacity: 0.7;
+        }
+    }
+  }
+  
+  .dots-container {
+    height: auto;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: auto;
+    text-align: center;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: 10;
+    list-style-type: none;
+  
+    li {
+        display: inline-block;
+        padding: 5px;
+  
+        &.active {
+            button {
+                color: #00D8FF;
+            }
+        }
+  
+        button {
+            color: #fff;
+            background-color: transparent;
+            border: none;
+  
+            &:hover {
+                text-decoration: none;
+                opacity: 0.7;
+                cursor: pointer;
+            }
+        }
+    }
+  }
+  
+  .toggle-play {
+    background: transparent;
+    border: none;
+    height: auto;
+    position: absolute;
+    width: auto;
+    right: 5%;
+    bottom: 30%;
+    color: #3d3d3d;
+    z-index: 1000000;
+  
+    &:hover {
+        text-decoration: none;
+        opacity: 0.7;
+        cursor: pointer;
+    }
+  }
+  
+  .each-slide {
+    width: 100vw; /* სლაიდის სიგანე სრულ ეკრანზე */
+    height: 669px; /* სლაიდის სიმაღლე */
+    float: left; /* სლაიდების მახლობლად ერთმანეთის გვერდზე განლაგება */
+    line-height: 100vh; /* ანიმაციის ეფექტი */
+    font-size: 40vh; /* ტექსტის ზომა, თუ გამოიყენებთ ტექსტს */
+    text-align: center; /* ტექსტის ცენტრირება */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left; /* ფონტის მდებარეობა */
+    background-color: transparent; /* ფონტის ფერი */
+  }
+  
+  
+  @media screen and (max-width: 1600px){
+    .each-slide {
+      height: 669px;
+    }
+  }
+  @media screen and (max-width: 1550px){
+    .each-slide {
+      height: 623px;
+    }
+    .header > nav > ul > li {
+      margin: 0;
+    }
+    .header > nav > ul{
+      gap: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 1460px){
+    .each-slide {
+      height: 589px;
+    }
+  }
+  @media screen and (max-width: 1400px){
+    .each-slide {
+      height: 551px;
+    }
+  }
+  @media screen and (max-width: 1300px){
+    .each-slide {
+      height: 469px;
+      width: 100%;
+    }
+    .image-container img {
+      width: 52%;
+      height: auto;
+  
+  
+  }
+  @media screen and (max-width: 1250px){
+    .navigation > nav {
+      margin: 0 30px;
+      width: 80%;
+    }
+    .header > nav > ul{
+      gap: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 1100px){
+    .each-slide {
+      height: 434px;
+    }
+    .contact-info-left {
+      width: 33%;
+    }
+  }
+  @media screen and (max-width: 1000px){
+    .each-slide {
+      height: 370px;
+    }
+    .contact-info-left {
+      display: flex;
+      align-items: center;
+      width: 33%;
+      height: 52px;
+      gap: 0px;
+  }
+  .navigation > nav {
+    margin: 0 30px;
+    width: 90%;
+  }
+  .image-container img {
+    width: 87%;
+  }
+  .the-header {
+    display: flex;
+    height: 53px;
+  
+  }
+  .contact-info-left::before {
+    right: 50%;
+  }
+  .contact-info-left::after {
+    right: 49.5%
+  }
+  .contact-info-left {
+    width: 40%;
+  }
+  }
+  
+  
+  @media screen and (max-width: 967px){
+    .navigation > nav {
+      margin: 0 30px;
+      width: 110%;
+    }
+    .header > nav > ul{
+      gap: 10px;
+    }
+    .contact-info-left {
+      width: 40%;
+    }
+  }
+  
+  @media screen and (max-width: 967px){
+    .navigation > nav {
+      margin: 0 30px;
+      width: 110%;
+    }
+    .header > nav > ul{
+      gap: 10px;
+    }
+    .header > nav > ul > li > a {
+      font-weight: 500; 
+    }
+    .image-container {
+      width: 55%;
+    }
+    
+  }
+  @media screen and (max-width: 850px){
+    .contact-info-left {
+      display: flex;
+      align-items: center;
+      width: 40%;
+      height: 52px;
+      gap: 0px;
+  }
+  
+  .contact-info-left::before {
+    right: 45%;
+  }
+  .contact-info-left::after {
+    right: 44.5%
+  }
+  .contact-info-left {
+    width: 50%;
+  }
+    .each-slide {
+      height: 335px;
+    }
+  }
+  }
+  
+  @media screen and (max-width: 850px){
+    .navigation > nav{
+      display: none;
+    }
+    .each-slide {
+      height: 263px;
+  }
+  }
+  
+  @media screen and (max-width: 800px) {
+    .each-slide {
+      height: 355px;
+    }
+    .contact-info-left::before {
+      right: 28%;
+    }
+    .contact-info-left::after {
+      right: 27.5%
+    }
+    .contact-info-left {
+      width: 50%;
+    }
+      .each-slide {
+        height: 235px;
+      }
+      .the-header {
+        display: flex;
+        height: 53px;
+        margin: 0;
+        padding: 0;
+      }
+    }
+  
+  
+    
+  @media screen and (max-width: 650px) {
+    .each-slide {
+        height: 200px;
+    }
+    .card-home p {
+      color: #777777;
+      font-size: 15.4px;
+      width: 311.828px;
+      text-align: center;
+  }
+  @media screen and (max-width: 597px) {
+    .contact-info-left{
+      width: 67%;
+    }
+    .contact-info-left::before {
+      right: 20%;
+    }
+    .contact-info-left::after {
+      right: 19.5%
+    }
+  
+  
+  }
+    .each-slide {
+      height: 194px;
+    }
+    .navigation {
+      margin: 0;
+      height: auto;
+    }
+   
+  
+  }
+  @media screen and (max-width: 350px) {
+    .each-slide {
+        height: 100px;
+    }
+  }
+  @media screen and (max-width: 420px) {
+    .contact-info-left::before {
+      right: 18%;
+    }
+    .contact-info-left::after {
+      right: 17.5%
+    }
+    .contact-info-left {
+      width: 64%;
+    }
+    .contact-info-left > P {
+      font-size: 7.86px;
+  }
+  .the-header {
+    display: flex;
+    height: 53px;
+    margin: 0;
+    padding: 0;
+  }
+  }

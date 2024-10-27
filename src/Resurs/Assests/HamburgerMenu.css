@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian&display=swap');
+body {
+    font-family: 'Noto Serif Georgian', serif;
+}
+/* Hamburger ღილაკი */
+.hamburger {
+    font-size: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: none;
+  }
+  
+  /* Sidebar მენიუ */
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* მენიუს იმალავს მარჯვნივ */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding-top: 60px;
+    transition: right 0.3s ease;
+    z-index: 999;
+  }
+  
+  .sidebar.open {
+    right: 0; /* მენიუს გახსნისას */
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .sidebar ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .sidebar ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  @media screen and (max-width: 850px) {
+    .hamburger {
+        display: block;;
+    }
+  }

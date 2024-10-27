@@ -1,0 +1,49 @@
+/* team.css */
+.team-section {
+
+    padding: 0 350px; /* რბილი მარგინით */
+    text-align: center; /* ტექსტის ცენტრში განლაგება */
+}
+
+.team-product-list {
+    overflow: hidden;
+    display: grid; /* გრიდი */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* ავტომატური ვიწრო სვეტები */
+    gap: 20px; /* სვეტებს შორის მანძილი */
+    margin-top: 20px; /* ზემოთ მანძილი */
+}
+
+.team-product-item {
+    cursor: pointer;
+    background: #fff; /* ფონით */
+    border: 1px solid #ccc; /* საზღვრები */
+    border-radius: 8px; /* რბილი კუთხეები */
+    padding: 15px; /* შიდა მარგინი */
+    display: flex; /* ფლექსი */
+    flex-direction: column; /* სვეტების განლაგება ვერტიკალურად */
+    align-items: center; /* ცენტრში განლაგება */
+    transition: transform 0.2s, box-shadow 0.2s; /* ეფექტი მაჩვენებელი */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* მსუბუქი ჩრდილი */
+}
+
+.team-product-item:hover {
+    transform: translateY(15px); /* მოძრავი ეფექტი */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* გააქტიურების დროს ჩრდილი */
+}
+
+.team-product-item img {
+    max-width: 100%; /* სურათის მაქსიმალური სიგანე */
+    height: auto; /* სიმაღლე ავტომატურად */
+    border-radius: 5px; /* სურათის რბილი კუთხეები */
+}
+
+.details-link {
+    margin-top: 10px; /* ლინკს ზემოთ მანძილი */
+    text-decoration: none; /* ტექსტის ხაზვა */
+    color: #008755; /* ლინკის ფერი - ღრმა მწვანე */
+}
+
+.details-link:hover {
+    text-decoration: underline; /* აჩერების დროს ხაზვა */
+    color: #96c03a; /* ლინკის ფერის ცვლილება ჰოვერზე - ლოგოს ფერი */
+}

@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian&display=swap');
+body {
+    font-family: 'Noto Serif Georgian', serif;
+}
+.Contacts_Email {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(33, 37, 41, 255);
+}
+
+form {
+    display: flex;
+    width: 25%;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.name, .email, .Text_area {
+    font-size: 17px;
+    color: #FFFFFF;
+    background-color: transparent;
+    border-width: 0px 0px 1px 0px;
+    border-color: #696868;
+    height: auto;
+    outline: none; /* removes the default focus outline */
+}
+
+.name:focus, .email:focus, .Text_area:focus {
+    border-width: 0px 0px 1px 0px; /* only bottom border */
+    border-color: #FFFFFF; /* change to preferred color on focus */
+    outline: none; /* ensures no extra border on focus */
+}
+
+
+.contact_Forms > p{
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.85em;
+    margin-bottom: 0px;
+    color:#727272;
+    font-family: "Roboto", sans-serif;
+
+}
+.loading-spinner {
+    width: 15px;
+    height: 15px;
+    border: 3px solid #fff;
+    border-top: 3px solid #007bff;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.result-message {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid yellow;
+    height: 50px;
+    color: #fafafaf5;
+    font-size: 1rem;
+    margin-top: 10px;
+    visibility: hidden;
+}
+
+/* When there is a result message */
+.result-message:not(:empty) {
+    visibility: visible;
+}
+
+
+.Contact_text {
+    color: #727272;
+}
+
+.submit {
+    font-family: "Roboto", sans-serif;
+}
